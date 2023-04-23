@@ -1,0 +1,461 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form{
+    height: 100vh;
+}
+@keyframes image {
+    0% {top: 0px;}
+    50% {top:25px;}
+    100% {top:0px;}
+
+    
+}
+.img{
+    animation: image 6s infinite ease-in-out;
+    position: relative;
+
+}
+.bgimg{
+    width: 50%;
+}
+.desktop{
+    /* Auto layout */
+        
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+    position: relative;
+    width: 1920px;
+    height: 1354px;
+    
+    background: #FFFFFF;
+    
+    } 
+    
+    
+    
+    .rectangle1 {
+        position: absolute;
+        width: 1920px;
+        height: 462px;
+        left: 0px;
+        top: 0px;
+    
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.83)), url("back_img.jpg");
+    }
+    
+    /* Jobs for Freshers */
+    .head {
+        position: absolute;
+        width: 411px;
+        height: 58px;
+        left: calc(50% - 411px/2 + 6.5px);
+        top: 150px;
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        /* identical to box height */
+        color: #FFFFFF;
+    }
+    
+    /* Frame 1 */
+    
+    .frame1 {
+        box-sizing: border-box;
+    
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
+        
+        position: absolute;
+        width: 355px;
+        height: 44px;
+        left: calc(50% - 355px/2 - 189.5px);
+        top: 269px;
+        
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+    }
+    
+    
+    /* Frame 2 */
+    
+    .frame2{
+        box-sizing: border-box;
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 355px;
+    height: 44px;
+    left: calc(50% - 355px/2 + 189.5px);
+    top: 269px;
+    
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    }
+    
+    /* Frame 6 */
+    
+    .frame6{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 217px;
+    height: 44px;
+    
+    background: #FFFFFF;
+    border-radius: 8px 0px 0px 0px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* group 2 */
+    
+    .group2{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: absolute;
+    width: 458px;
+    height: 44px;
+    left: 249px;
+    top: 418px;
+    }
+    
+    /* Frame 5 */
+    
+    .frame5{
+    box-sizing: border-box;
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 241px;
+    height: 44px;
+    
+    border: 1px solid #FFFFFF;
+    border-radius: 0px 8px 0px 0px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    }
+    
+    
+    /* Frame 30 */
+    
+    .frame30{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 14px;
+    
+    width: 1430px;
+    height: 858px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    }
+    
+    /* Frame 19 */
+    
+    .frame19{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 718px;
+    overflow-y: scroll;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* Frame 7 */
+    
+    .frame7{
+    box-sizing: border-box;
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 8px;
+    
+    width: 698px;
+    height: 202px;
+    
+    border: 1px solid #000000;
+    border-radius: 8px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* Frame 17 */
+    .frame_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .frame17{
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    
+    width: 678px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    }
+    
+    /* Frame 18 */
+    
+    .frame18{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 10px;
+    gap: 24px;
+    
+    width: 99px;
+    height: 23px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    }
+    
+    /* Save */
+    
+    .save{
+    width: 28px;
+    height: 15px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* Company name */
+    .compnay-name{
+        width: 148px;
+    height: 24px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    }
+    
+    /* Freshers */
+    
+    .fresher{
+    width: 66px;
+    height: 19px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    }
+    
+    /* Frame 9 */
+    
+    .frame9{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    
+    width: 79px;
+    height: 19px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    }
+    
+    /* Frame 20 */
+    
+    .frame20{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 10px;
+    gap: 24px;
+    
+    width: 698px;
+    height: 838px;
+    overflow-y: scroll;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    }
+    
+    /* Frame 27 */
+    
+    .frame27{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    
+    width: 678px;
+    height: 200px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* Frame 28 */
+    
+    .frame28{
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+        
+        width: 678px;
+        height: 648px;
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }

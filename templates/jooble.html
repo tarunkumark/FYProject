@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Openings</title>
+    <style>
+      /* global styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* card styles */
+      .card {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .card-image {
+        flex: 0 0 120px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+      }
+
+      .card-image img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+      }
+
+      .card-content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .card-salary {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #007aff;
+      }
+
+      .card-location {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #5f5f5f;
+      }
+
+      .card-company {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #5f5f5f;
+      }
+
+      .card-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #5f5f5f;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* header styles */
+      .header {
+        background-color: #007aff;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        justify-content: space-evenly;
+      }
+
+      .header h1{
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      .header > form > a{
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Jobs for Freshers</h1>
+        <form id="glassdoor" method="POST" action="/">
+          <input type="hidden" name="company" value="glassdoor">
+          <a href="#" onclick="document.getElementById('glassdoor').submit();">Glassdoor</a>
+        </form>
+        <form id="naukri" method="POST" action="/">
+          <input type="hidden" name="company" value="naukri">
+          <a href="#" onclick="document.getElementById('naukri').submit();">Naukri</a>
+        </form>
+        <form id="jooble" method="POST" action="/">
+          <input type="hidden" name="company" value="jooble">
+          <a href="#" onclick="document.getElementById('jooble').submit();">Jooble</a>
+        </form>
+        <a href="{{url_for('applied')}}">
+            <h1>
+              Applied Jobs
+            </h1>
+        </a>
+    </header>
+    {%for job in jobs%}
+    <a href="#" onclick="document.getElementById('{{job.link}}').submit();">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61PPaBj8XfFNYCGWtU-4a7VPMmujqDu56RE0zYhowlw&s" alt="job image" />
+      </div>
+      <div class="card-content">
+        <div class="card-title">{{job.title}}</div>
+        <div class="card-salary">{{job.salary}}</div>
+        <div class="card-location">{{job.location}}</div>
+        <div class="card-company">company: {{job.company}}</div>
+        <form id="{{job.link}}" method="POST" action="{{url_for('applied')}}">
+          <input type="hidden" name="url" value="{{job.link}}">
+          <input type="hidden" name="company" value="{{job.company}}">
+          <input type="hidden" name="job_title" value="{{job.title}}">
+          <input type="hidden" name="salary" value="{{job.salary}}">
+          <input type="hidden" name="location" value="{{job.location}}">
+          <input type="submit" value="Apply">
+      </form>
+      
+      </div>
+    </div>
+  </a>
+  {%endfor%}
+    <!-- Repeat the card section for multiple jobs -->
+  </body>
+</html>
