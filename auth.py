@@ -3,8 +3,8 @@ import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from flask import json
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fyproject_user:7QMbmgPI18cRIsmXrHgXdzSQt0PcIxb5@dpg-ch8cf0g2qv2864s908eg-a.oregon-postgres.render.com/fyproject'
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fyproject_user:7QMbmgPI18cRIsmXrHgXdzSQt0PcIxb5@dpg-ch8cf0g2qv2864s908eg-a.oregon-postgres.render.com/fyproject'
+# app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
 db = SQLAlchemy(app)
 import pandas as pd
 import csv
@@ -41,8 +41,8 @@ class UserApplication(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False)
     company = db.Column(db.String(120), nullable=False)
-    job_title = db.Column(db.String(120), nullable=False)
-    job_url = db.Column(db.String(120), nullable=False)
+    job_title = db.Column(db.String(200), nullable=False)
+    job_url = db.Column(db.String(300), nullable=False)
     location = db.Column(db.String(120), nullable=False)
     status = db.Column(db.String(120), nullable=False)
     date_applied = db.Column(db.String(120), nullable=False)
