@@ -3,6 +3,9 @@
   <head>
     <title>Job Applications</title>
     <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
       table {
         border-collapse: collapse;
         width: 100%;
@@ -31,6 +34,7 @@
 
       .dropdown:hover .dropdown-content {
         display: block;
+        background-color: #ffffff;
       }
 
       .dropdown-content a {
@@ -41,17 +45,54 @@
       }
 
       .dropdown-content a:hover {
-        background-color: #f1f1f1;
+        background-color: #a5a5a5;
+      }
+      .main{
+        padding: 0 30px 0 30px;
+      }
+
+      .button{
+
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 3px;
+        padding: 0 15px;
+        border-radius: 4px;
+        color: #6200ee;
+        background: transparent;
+        line-height: 1.15;
+        font-size: 14px;
+        height: 36px;
+        word-spacing: 0px;
+        letter-spacing: .0892857143em;
+        text-decoration: none;
+        text-transform: uppercase;
+        min-width: 120px;
+        border: 1px solid #6200ee;
+        text-align: center;
+        transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .button:hover {
+          background: #f4f4f4;
+      }
+      .location{
+        color: #6200ee;
+      }
+      .company{
+        color: rgb(59, 123, 233);
       }
     </style>
   </head>
   <body>
-    <h1>Job Applications</h1>
+    <div class="main">
+      <h1>Job Applications</h1>
     <table>
       <tr>
           <th>Job ID</th>
         <th>Job Title</th>
-        <th>Location</th>
+        <th >Location</th>
         <th>Company</th>
         <th>Date Applied</th>
         <th>Status</th>
@@ -60,12 +101,12 @@
         <tr>
             <td>{{ job.id }}</td>
           <td>{{ job.job_title }}</td>
-          <td>{{ job.location }}</td>
-          <td>{{job.company}}</td>
+          <td class="location">{{ job.location }}</td>
+          <td class="company">{{job.company}}</td>
           <td>{{ job.date_applied }}</td>
           <td>
             <div class="dropdown">
-              <button>{{ job.status }}</button>
+              <button class="button">{{ job.status }}</button>
               <div class="dropdown-content">
                 <a href="#" onclick="updateJob('{{ job.id }}', 'applied')">Applied</a>
                 <a href="#" onclick="updateJob('{{ job.id }}', 'accepted')">Accepted</a>
@@ -82,6 +123,7 @@
       <input type="hidden" name="job_id" id="job-id-input">
       <input type="hidden" name="status" id="status-input">
     </form>
+    </div>
 
     <script>
       function updateJob(jobId, status) {

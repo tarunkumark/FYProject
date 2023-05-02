@@ -3,7 +3,8 @@ import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from flask import json
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fyproject_user:7QMbmgPI18cRIsmXrHgXdzSQt0PcIxb5@dpg-ch8cf0g2qv2864s908eg-a.oregon-postgres.render.com/fyproject'
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
 db = SQLAlchemy(app)
 import pandas as pd
 import csv
@@ -22,6 +23,9 @@ def get_jooble_jobs():
     with open("jooble.json","r") as f:
         return json.loads(f.read())['jobs']
 
+def get_news():
+    with open("news.json","r") as f:
+        return json.loads(f.read())
 
 
 app.secret_key='asdsdfsdfs13sdf_df%&'
@@ -132,6 +136,11 @@ def update():
     user.status = status
     db.session.commit()
     return redirect(url_for('applied'))
+
+@app.route("/news")
+def news():
+    data = get_news()['news']['news']
+    return render_template("news.html",data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)

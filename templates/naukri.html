@@ -18,6 +18,7 @@
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
         margin-bottom: 30px;
+        padding: 30px;
       }
 
       .card-image {
@@ -48,19 +49,20 @@
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
-        color: #007aff;
+        color: #f04141;
       }
 
       .card-location {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 14px;
+        margin-bottom: 30px;
         color: #5f5f5f;
       }
 
       .card-company {
         font-size: 18px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         color: #5f5f5f;
+        font-weight: 600;
       }
 
       .card-description {
@@ -102,6 +104,29 @@
       a{
         text-decoration: none;
       }
+
+      .button{
+
+        display: inline-block;
+        outline: 0;
+        cursor: pointer;
+        border: none;
+        padding: 0 56px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 7px;
+        background-color: #0070f3;
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+        transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+      }
+      .button:hover{
+        background: rgba(0,118,255,0.9);
+        box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+      }
+   
     </style>
   </head>
   <body>
@@ -133,16 +158,16 @@
       </div>
       <div class="card-content">
         <div class="card-title">{{job.title}}</div>
-        <div class="card-salary">salary: {{job.salary}}</div>
+        <div class="card-salary">{{job.salary}}</div>
+        <div class="card-company">{{job.company}}</div>
         <div class="card-location">{{job.location}}</div>
-        <div class="card-company">company: {{job.company}}</div>
         <form id="{{job.url}}" method="POST" action="{{url_for('applied')}}">
           <input type="hidden" name="url" value="{{job.url}}">
           <input type="hidden" name="company" value="{{job.company}}">
           <input type="hidden" name="job_title" value="{{job.title}}">
           <input type="hidden" name="salary" value="{{job.salary}}">
           <input type="hidden" name="location" value="{{job.location}}">
-          <input type="submit" value="Apply">
+          <input type="submit" value="Apply" class="button">
       </form>
       
       </div>
