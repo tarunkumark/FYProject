@@ -86,14 +86,14 @@
       }
 
       .header h1{
-        font-size: 36px;
+        font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0;
       }
       .header > form > a{
-        font-size: 36px;
+        font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -116,8 +116,8 @@
           <a href="#" onclick="document.getElementById('naukri').submit();">Naukri</a>
         </form>
         <form id="jooble" method="POST" action="/">
-          <input type="hidden" name="company" value="jooble">
-          <a href="#" onclick="document.getElementById('jooble').submit();">Jooble</a>
+          <input type="hidden" name="company" value="jooble" active>
+          <a href="#" onclick="document.getElementById('jooble').submit();" active>Jooble</a>
         </form>
         <a href="{{url_for('applied')}}">
             <h1>

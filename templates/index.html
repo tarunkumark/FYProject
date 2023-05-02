@@ -12,7 +12,9 @@
 
       /* card styles */
       .card {
+        padding: 30px;
         display: flex;
+        justify-content: space-around;
         flex-direction: row;
         background-color: #ffffff;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
@@ -28,9 +30,9 @@
       }
 
       .card-image img {
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
+        width: 100%;
+        height: 50%;
+        /* object-fit: cover; */
       }
 
       .card-content {
@@ -86,14 +88,14 @@
       }
 
       .header h1{
-        font-size: 36px;
+        font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0;
       }
       .header > form > a{
-        font-size: 36px;
+        font-size: 16px;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -108,7 +110,7 @@
     <header class="header">
       <h1>Jobs for Freshers</h1>
         <form id="glassdoor" method="POST" action="/">
-          <input type="hidden" name="company" value="glassdoor">
+          <input type="hidden" name="company" value="glassdoor" active>
           <a href="#" onclick="document.getElementById('glassdoor').submit();">Glassdoor</a>
         </form>
         <form id="naukri" method="POST" action="/">
