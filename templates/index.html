@@ -1,143 +1,172 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Job Openings</title>
-    <style>
-      /* global styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
 
-      /* card styles */
-      .card {
-        padding: 30px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        background-color: #ffffff;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        margin-bottom: 10px;
-      }
+<head>
+  <title>Job Openings</title>
+  <style>
+    /* global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      .card-image {
-        flex: 0 0 120px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        overflow: hidden;
-        background-color:#0caa41;
-        display: flex;
-        align-items: center;
-        
-      }
+    /* card styles */
+    .card {
+      padding: 30px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
 
-      .card-image img {
-        width: 100%;
-        height: 20vh;
-        /* object-fit: cover; */
-      }
+    .card-image {
+      flex: 0 0 120px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow: hidden;
+      background-color: #0caa41;
+      display: flex;
+      align-items: center;
 
-      .card-content {
-        flex: 1;
-        padding: 20px;
-      }
+    }
 
-      .card-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
+    .card-image img {
+      width: 100%;
+      height: 20vh;
+      /* object-fit: cover; */
+    }
 
-      .card-salary {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #0caa41;
-      }
+    .card-content {
+      flex: 1;
+      padding: 20px;
+    }
 
-      .card-location {
-        font-size: 14px;
-        margin-bottom: 20px;
-        color: #5f5f5f;
-        font-weight: lighter;
-      }
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-      .card-company {
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-weight: 600;
-        color: #5f5f5f;
-      }
+    .card-salary {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0caa41;
+    }
 
-      .card-description {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #5f5f5f;
-        margin-bottom: 30px;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+    .card-location {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #5f5f5f;
+      font-weight: lighter;
+    }
 
-      /* header styles */
-      .header {
-        background-color: #007aff;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        height: 80px;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        justify-content: space-evenly;
-      }
+    .card-company {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #5f5f5f;
+    }
 
-      .header h1{
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 0;
-      }
-      .header > form > a{
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 0;
-      }
-      a{
-        text-decoration: none;
-      }
-      .button{
+    .card-description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #5f5f5f;
+      margin-bottom: 30px;
+    }
 
-        display: inline-block;
-        outline: 0;
-        cursor: pointer;
-        border: none;
-        padding: 0 56px;
-        height: 45px;
-        line-height: 45px;
-        border-radius: 7px;
-        background-color: #0070f3;
-        color: white;
-        font-weight: 400;
-        font-size: 16px;
-        box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-        transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
-      }
-      .button:hover{
-          background: rgba(0,118,255,0.9);
-          box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-      }
-                
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <h1>Jobs for Freshers</h1>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* header styles */
+    .header {
+      width: 100%;
+      position: absolute;
+      background-color: #007aff;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      height: 80px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+      justify-content: space-evenly;
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    .header>form>a {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .button {
+
+      display: inline-block;
+      outline: 0;
+      cursor: pointer;
+      border: none;
+      padding: 0 56px;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 7px;
+      background-color: #0070f3;
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+      transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      background: rgba(0, 118, 255, 0.9);
+      box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+    }
+
+    .flex-main {
+      display: flex;
+      flex-direction: row-reverse;
+      /* position: relative; */
+    }
+
+    .news {
+      top: 5rem;
+      position: relative;
+    }
+
+    .flex {
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-main">
+    <div class="news">
+      <iframe src="news.html" height="800" width="300"></iframe>
+    </div>
+
+    <div class="flex">
+      <header class="header">
+        <h1>Jobs for Freshers</h1>
         <form id="glassdoor" method="POST" action="/">
           <input type="hidden" name="company" value="glassdoor" active>
           <a href="#" onclick="document.getElementById('glassdoor').submit();">Glassdoor</a>
@@ -154,35 +183,40 @@
           <h1>
             Applied Jobs
           </h1>
-      </a>
-    </header>
-    {%for job in jobs%}
-    <a href="#" onclick="document.getElementById('{{job.url}}').submit();">
-    <div class="card">
-      <div class="card-image">
-        <img src="https://play-lh.googleusercontent.com/EeA0H3i9uat-J-bC9VqOBmTmCf4HfSiyfiyPnURetHA-crNWpZuxFCqJk-eVXz3z_M4" alt="job image" />
-      </div>
-      <div class="card-content">
-        <div class="card-title">{{job.job_title}}</div>
-        <div class="card-salary">{{job.salary}}</div>
-        <div class="card-company">{{job.company}}</div>
-        <div class="card-location">{{job.location}}</div>
-        <div class="card-description">
-          {{job.description}}
+        </a>
+      </header>
+      {%for job in jobs%}
+      <a href="#" onclick="document.getElementById('{{job.url}}').submit();">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://play-lh.googleusercontent.com/EeA0H3i9uat-J-bC9VqOBmTmCf4HfSiyfiyPnURetHA-crNWpZuxFCqJk-eVXz3z_M4"
+              alt="job image" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">{{job.job_title}}</div>
+            <div class="card-salary">{{job.salary}}</div>
+            <div class="card-company">{{job.company}}</div>
+            <div class="card-location">{{job.location}}</div>
+            <div class="card-description">
+              {{job.description}}
+            </div>
+            <form id="{{job.url}}" method="POST" action="{{url_for('applied')}}">
+              <input type="hidden" name="url" value="{{job.url}}">
+              <input type="hidden" name="company" value="{{job.company}}">
+              <input type="hidden" name="job_title" value="{{job.job_title}}">
+              <input type="hidden" name="salary" value="{{job.salary}}">
+              <input type="hidden" name="location" value="{{job.location}}">
+              <input type="submit" value="Apply" class="button">
+            </form>
+
+          </div>
         </div>
-        <form id="{{job.url}}" method="POST" action="{{url_for('applied')}}">
-          <input type="hidden" name="url" value="{{job.url}}">
-          <input type="hidden" name="company" value="{{job.company}}">
-          <input type="hidden" name="job_title" value="{{job.job_title}}">
-          <input type="hidden" name="salary" value="{{job.salary}}">
-          <input type="hidden" name="location" value="{{job.location}}">
-          <input type="submit" value="Apply" class="button">
-      </form>
-      
-      </div>
+      </a>
+      {%endfor%}
+      <!-- Repeat the card section for multiple jobs -->
     </div>
-  </a>
-  {%endfor%}
-    <!-- Repeat the card section for multiple jobs -->
-  </body>
+  </div>
+</body>
+
 </html>

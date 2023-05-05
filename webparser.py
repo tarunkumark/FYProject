@@ -70,7 +70,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-firefox_binary = FirefoxBinary('/home/lichking/firefox/firefox/firefox')
+firefox_binary = FirefoxBinary("C:\Program Files\Mozilla Firefox\firefox.exe")
 pages = int(input('Enter number of pages to scrape: '))
 page = 0
 df = pd.DataFrame(columns=['title','company','ratings','reviews','experience',

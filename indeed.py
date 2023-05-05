@@ -10,7 +10,7 @@ num_pages = int(input("Number of pages: "))
 start_list = [page * 10 for page in range(num_pages)]
 base_url = 'https://in.indeed.com'
 #base_url = "https://www.indeed.com'
-firefox_binary = FirefoxBinary('/home/lichking/firefox/firefox/firefox')
+firefox_binary = FirefoxBinary("C:\Program Files\Mozilla Firefox\firefox.exe")
 driver = webdriver.Firefox(firefox_binary=firefox_binary)
 
 for start in start_list:
