@@ -148,7 +148,7 @@
     }
 
     .news {
-      top: 5rem;
+      /* top: 5rem; */
       position: relative;
     }
 
@@ -161,7 +161,8 @@
 <body>
   <div class="flex-main">
     <div class="news">
-      <iframe src="news.html" height="800" width="300"></iframe>
+      <h1 style="text-align: center;">News</h1>
+      <iframe src="{{url_for('news')}}" height="800" width="300"></iframe>
     </div>
 
     <div class="flex">

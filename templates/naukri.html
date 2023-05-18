@@ -20,6 +20,11 @@
         margin-bottom: 30px;
         padding: 30px;
       }
+      .flex-main {
+      display: flex;
+      flex-direction: row-reverse;
+      /* position: relative; */
+    }
 
       .card-image {
         flex: 0 0 120px;
@@ -126,10 +131,23 @@
         background: rgba(0,118,255,0.9);
         box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
       }
-   
+      .news {
+      /* top: 5rem; */
+      position: relative;
+    }
+    .flex {
+      width: 80%;
+    }
     </style>
   </head>
   <body>
+    <div class="flex-main">
+      <div class="news">
+      <h1 style="text-align: center;">News</h1>
+        
+        <iframe src="{{url_for('news')}}" height="800" width="300"></iframe>
+      </div>
+      <div class="flex">
     <header class="header">
       <h1>Jobs for Freshers</h1>
         <form id="glassdoor" method="POST" action="/">
@@ -175,5 +193,7 @@
   </a>
   {%endfor%}
     <!-- Repeat the card section for multiple jobs -->
+    </div>
+  </div>
   </body>
 </html>

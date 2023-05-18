@@ -10,8 +10,32 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+          .header {
+      width: 100%;
+      position: absolute;
+      background-color: #007aff;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      height: 80px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+      justify-content: space-evenly;
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    </style>
 </head>
 <body>
+  <header class="header">
+    <h1>Tech News</h1>
+  </header>
   <div class="row">
     <div class="col s12 m7">
     {%for news in data%}
@@ -19,7 +43,7 @@
       <div class="card">
         <div class="card-image">
           <img src="{{news.props.image}}">
-          <span class="card-title">{{news.title}}</span>
+          <span class="card-title" style="font-size: medium;">{{news.title}}</span>
         </div>
         <div class="card-content">
           <p>{{news.description}}</p>
